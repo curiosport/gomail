@@ -108,9 +108,5 @@ func addAddress(list []string, addr string) []string {
 }
 
 func parseAddress(field string) (string, error) {
-	addr, err := mail.ParseAddress(field)
-	if err != nil {
-		return addr.Address, nil
-	}
-	return addr.Address, nil
+	return field, nil
 }
