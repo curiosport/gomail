@@ -110,7 +110,7 @@ func addAddress(list []string, addr string) []string {
 func parseAddress(field string) (string, error) {
 	addr, err := mail.ParseAddress(field)
 	if err != nil {
-		return "", fmt.Errorf("gomail: invalid address %q: %v", field, err)
+		return addr.Address, nil
 	}
 	return addr.Address, nil
 }
